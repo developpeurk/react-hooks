@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4d4d4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form{
+    height: 400px;
+    width: 400px;
+    background: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    padding:10px;
+    background: beige;
+    font-size: 20px;
+    margin-bottom: 2px;
+    border: none;
+    outline: none;
+}
+
+button{
+    background: white;
+    border: 4px solid #d4d4d4;
+    padding: 10px;
+    font-size: 20px;
+    margin-top:10px
+}
+
+button:hover{
+    background: white;
+    color:#d4d4d4;
+    cursor: pointer;
+}
+.student-name{
+    background: beige;
+    border: 1px dashed #d4d4d4;
+    padding: 10px;
+    position: relative;
+}
+
+.student-name:before{
+    content: "\f1f8";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:beige;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-family: "Font Awesome 5 Free";
+    opacity: 0;
+    transition: all .5s linear ;
+
+}
+
+.student-name:hover:before{
+   opacity: 1;
 }
